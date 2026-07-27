@@ -27,7 +27,7 @@ class Birthday(Field):
         
     @property
     def date(self):
-        return datetime.strftime(self.value, "%d.%m.%Y").date()
+        return datetime.strptime(self.value, "%d.%m.%Y").date()
 
 class Record:
     def __init__(self, name):
